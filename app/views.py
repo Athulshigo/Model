@@ -33,4 +33,4 @@ def predict(request):
         print(f"Predicted Close Price for {user_input_date}: {predicted_close[0]}")
 
 
-    return render(request, "index.html", {'predicted': predicted_close[0], 'date': request.POST['date']})
+    return render(request, "Predicted.html", {'predicted':round(predicted_close[0], 2), 'date': request.POST['date']})
